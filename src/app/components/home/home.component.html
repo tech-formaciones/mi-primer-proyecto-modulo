@@ -1,0 +1,28 @@
+<h1>Home</h1>
+<br />
+<p><b>Nombre:</b> {{nombre}}</p>
+<p><b>Nombre: </b> <span [innerHTML]="nombre"></span></p>
+<p><b>Nombre: </b> <span bind-innerHTML="nombre"></span></p>
+<input type="text" [value]="nombre" (input)="onInput($event)" />
+<br />
+
+<p><b>Apellidos:</b> {{apellido}}</p>
+<input type="text" [(ngModel)]="apellido" />
+
+
+<p><b>Valor:</b> {{ numero }}</p>
+<p><b>Valor + 10:</b> {{ numero + 10 }}</p>
+<p><b>Valor + getVal():</b> {{ numero + getVal() }}</p>
+
+<img src="{{imagen}}" style="width: 200px; height: auto;" />
+<img [src]="imagen" style="width: 200px; height: auto;" />
+<img bind-src="imagen" style="width: 200px; height: auto;" />
+<br /><br />
+<button (click)="AumentarImagen()">Aumentar</button>
+&nbsp;
+<button on-click="ReducirImagen()">Reducir</button>
+&nbsp; {{ancho}}
+<br /><br />
+<img src="{{imagen}}" style="width: {{ancho}}px; height: {{alto}};" />&nbsp;
+<img [src]="imagen" [style.width.px]="ancho" [style.height]="alto" />
+<br />
