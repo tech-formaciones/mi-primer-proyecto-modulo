@@ -8,11 +8,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MasterComponent } from './components/master-detail/master.component';
+import { DetailComponent } from './components/master-detail/detail.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, PrivacyComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [AppComponent, HomeComponent, AboutComponent, PrivacyComponent, MasterComponent, DetailComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule],
   providers: [],
-  bootstrap: [HomeComponent]
+  bootstrap: [MasterComponent]
 })
 export class AppModule { }

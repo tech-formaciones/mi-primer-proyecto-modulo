@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "username": "juan",
+        "password": "angular",
+        "firstname": "Juan",
+        "lastname": "Sánchez Sanz",
+        "phone": "555-127-392",
+        "office": "Madrid",
+        "online": true
+    },
+    {
+        "id": 2,
+        "username": "ana",
+        "password": "angular",
+        "firstname": "Ana",
+        "lastname": "Rojas Sánchez",
+        "phone": "555-325-111",
+        "office": "Valencia",
+        "online": true
+    },
+    {
+        "id": 3,
+        "username": "antonio",
+        "password": "angular",
+        "firstname": "Antonio",
+        "lastname": "Calderón Plaza",
+        "phone": "655-322-110",
+        "office": "Madrid",
+        "online": false
+    },
+    {
+        "id": 4,
+        "username": "eva",
+        "password": "angular",
+        "firstname": "Eva",
+        "lastname": "Muñoz Sanz",
+        "phone": "552-966-412",
+        "office": "Barcelona",
+        "online": false
+    },
+    {
+        "id": 5,
+        "username": "samuel",
+        "password": "angular",
+        "firstname": "Samuel",
+        "lastname": "Solano García",
+        "phone": "677-425-112",
+        "office": "Barcelona",
+        "online": true
+    }
+]

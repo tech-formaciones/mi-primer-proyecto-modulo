@@ -1,0 +1,41 @@
+<br />
+<div class="row">
+    <div class="col-1"> </div>
+    <div class="col-10"> 
+        <h1>Ejemplo de Maestro - Detalle</h1>
+        <hr />
+    </div>
+    <div class="col-1"> </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-1"> </div>
+    <div class="col-5"> 
+        <h2>Listado de Clientes</h2>
+        <hr />
+        <div class="table table-responsive table-striped">
+            <thead>
+                <tr>
+                    <td style="width: 10%;"><b>ID</b></td>
+                    <td style="width: 20%;"><b>Nombre</b></td>
+                    <td style="width: 30%;"><b>Apellidos</b></td>
+                    <td style="width: 25%;"><b>Ciudad</b></td>
+                    <td style="width: 15%;"> </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let userItem of usersList">
+                    <td>{{userItem.id}}</td>
+                    <td>{{userItem.firstname}}</td>
+                    <td>{{userItem.lastname}}</td>
+                    <td>{{userItem.office}}</td>
+                    <td>
+                        <button class="btn btn-success btn-sm">ficha</button>
+                    </td>
+                </tr>
+            </tbody>
+        </div>
+    </div>
+    <div class="col-5"> </div>
+    <div class="col-1"> </div>
+</div>
