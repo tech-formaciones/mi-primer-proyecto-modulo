@@ -1,1 +1,56 @@
-<p>detail works!</p>
+<div>
+    <h2 #title>Fiche de Cliente</h2>
+    <hr />
+    <form>
+        <div class="form-group">
+            <label>Identificador</label>
+            <input type="text" class="form-control" name="id" [(ngModel)]="userElement.id" required />
+            <span class="invalid-feedback"></span>
+        </div>
+        <br />
+        <div class="form-group">
+            <label>Nombre de Usuario</label>
+            <input type="text" class="form-control" name="username" [(ngModel)]="userElement.username" required />
+            <span class="invalid-feedback"></span>
+        </div>
+        <br />
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input type="text" class="form-control" name="password" [(ngModel)]="userElement.password" required />
+            <span class="invalid-feedback"></span>
+        </div>
+        <br />
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" class="form-control" name="firstname" [(ngModel)]="userElement.firstname" required />
+            <span class="invalid-feedback"></span>
+        </div>
+        <br />
+        <div class="form-group">
+            <label>Apellidos</label>
+            <input type="text" class="form-control" name="lastname" [(ngModel)]="userElement.lastname" required />
+            <span class="invalid-feedback"></span>
+        </div>
+        <br />
+        <div class="form-group">
+            <label>Teléfono</label>
+            <input type="text" class="form-control" name="phone" [(ngModel)]="userElement.phone" required />
+            <span class="invalid-feedback"></span>
+        </div>
+        <br />
+        <div class="form-group">
+            <label>Oficina</label>
+            <input type="text" class="form-control" name="office" [(ngModel)]="userElement.office" required />
+            <span class="invalid-feedback"></span>
+        </div>                                                       
+    </form>
+    <br />
+    <div class="row">
+        <div class="col-6">
+            <button type="button" class="btn btn-primary" (click)="onSaveClient()">Grabar</button>
+        </div>
+        <div class="col-6 text-end">
+            <a href="/" class="btn btn-success">Menú Principal</a>
+        </div>
+    </div>
+</div>

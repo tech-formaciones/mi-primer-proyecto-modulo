@@ -13,7 +13,7 @@
     <div class="col-5"> 
         <h2>Listado de Clientes</h2>
         <hr />
-        <div class="table table-responsive table-striped">
+        <table class="table table-responsive table-striped">
             <thead>
                 <tr>
                     <td style="width: 10%;"><b>ID</b></td>
@@ -30,12 +30,28 @@
                     <td>{{userItem.lastname}}</td>
                     <td>{{userItem.office}}</td>
                     <td>
-                        <button class="btn btn-success btn-sm">ficha</button>
+                        <button class="btn btn-success btn-sm" (click)="onClickFicha(userItem)">ficha</button>
                     </td>
                 </tr>
             </tbody>
-        </div>
+        </table>
+        <br />
+        <p><b>Seleccionado:</b> {{userSelect.firstname | uppercase}} {{userSelect.lastname | lowercase}}</p>
+        <p><b>Fecha: </b> {{currentDate | date : 'short'}}</p>
+        <p><b>Fecha: </b> {{currentDate | date : 'medium'}}</p>
+        <p><b>Fecha: </b> {{currentDate | date : 'long'}}</p>
+        <p><b>Fecha: </b> {{currentDate | date : 'full'}}</p>
+        <p><b>Fecha: </b> {{currentDate | date : 'fullDate'}}</p>
+        <p><b>Fecha: </b> {{currentDate | date : 'dd/MM/yyyy'}}</p>
+        <p><b>Observable: </b> {{time | async | date : 'medium'}}</p>
     </div>
-    <div class="col-5"> </div>
+    <div class="col-5"> 
+        <!-- Incorporamos el HTML del detalle dentro del HTML del maestro -->
+        <app-detail #detail1 [userElement]="userSelect" (onSave)="onSaveUser($event)"></app-detail>
+    </div>
     <div class="col-1"> </div>
 </div>
+<br />
+<br />
+<br />
+<br />
