@@ -3,6 +3,7 @@ import { User } from '../../data/user.model';
 
 @Component({
   selector: 'app-detail',
+  standalone: false,
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.css'
 })

@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-master',
+  standalone: false,
   templateUrl: './master.component.html',
   styleUrl: './master.component.css'
 })
