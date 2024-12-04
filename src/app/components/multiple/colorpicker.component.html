@@ -1,0 +1,24 @@
+<br />
+<br />
+<div class="row" style="height: 320px">
+    <div class="col-md-3"> </div>
+    <div class="col-md-6">
+        <span [(colorPicker)]="arrayColors[selectedColor]" [cpDialogDisplay]="'inline'"
+            [style.background]="arrayColors[selectedColor]" [cpCancelButtonClass]="'btn btn-primary btn-xs'"
+            [cpCancelButton]="true" [cpToggle]="true" (colorPickerChange)="onChangeSelectColor($event)">
+        </span>
+    </div>
+    <div class="col-md-3"> </div>
+
+    <!--<div class="col-md-4">
+        <div class="array-colors-element" [style.background]="arrayColors['color']" (click)="selectedColor='color'"></div>
+        <div class="array-colors-element" [style.background]="arrayColors['color2']" (click)="selectedColor='color2'"></div>
+        <div class="array-colors-element" [style.background]="arrayColors['color3']" (click)="selectedColor='color3'"></div>
+        <div class="array-colors-element" [style.background]="arrayColors['color4']" (click)="selectedColor='color4'"></div>
+        <div class="array-colors-element" [style.background]="arrayColors['color5']" (click)="selectedColor='color5'"></div>
+    </div>
+
+    <div class="col-md-3">
+        {{arrayColors[selectedColor]}}
+    </div>-->
+</div>

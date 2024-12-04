@@ -1,0 +1,47 @@
+<br />
+<div class="row">
+    <div class="col-1"> </div>
+    <div class="col-10">
+        <h1>Ejercicio: Visor de Imagenes</h1>
+        <hr />
+        <br />
+    </div>
+    <div class="col-1"> </div>
+</div>
+<br />
+<div class="row">
+
+    <div class="col-6">
+        <app-viewer [imageItem]="imageSelect" (MouseMove)="onImageVisorMouseMove($event)"></app-viewer>
+    </div>
+    <div class="col-5">
+        <app-imagesinfo [imageItem]="imageSelect" 
+            [imageHeight]="naturalHeight" [imageWidth]="naturalWidth" 
+            [clientX]="clientX" [clientY]="clientY">
+        </app-imagesinfo>
+    </div>
+    <div class="col-1"> </div>
+</div>
+<div class="row">
+    <div class="col-1"> </div>
+    <div class="col-10">
+        <br />
+        <hr />
+        <br />
+    </div>
+    <div class="col-1"> </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-between w-100" style="max-width: 1200px;">
+                <div *ngFor="let imageItem of imagesList" class="hover-effect">
+                    <img src="{{imageItem.url}}" class="img-thumbnail" alt="{{imageItem.description}}" (click)="onImageClick(imageItem, $event)" style="height: 150px; width: auto;">
+                </div>                
+            </div> 
+        </div>        
+    </div>
+</div>
+<br />
+<br />

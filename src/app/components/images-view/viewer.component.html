@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col text-center equal-height">
+        <div class="container-fluid p-0">
+            <img *ngIf="imageItem.url" src="{{imageItem.url}}" class="size-image" alt="{{imageItem.description}}" (mousemove)="onMouseMove($event)">
+            <p *ngIf="!imageItem.url">
+                <br /><br /><br /><br /><br /><br />
+                <b class="text-danger" style="font-size: 150%;">seleccione una imagen para mostrar</b>
+            </p>
+        </div>
+    </div>
+</div>
+

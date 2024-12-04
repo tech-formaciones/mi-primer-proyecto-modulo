@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "url": "https://lasemanadelsur.com/wp-content/uploads/2023/08/image-123.png",
+    "description": "Un cachorro de leopardo."
+  },
+  {
+    "id": 2,
+    "url": "https://grupovierci.brightspotcdn.com/dims4/default/115025e/2147483647/strip/true/crop/1599x900+1+0/resize/1000x563!/quality/90/?url=https%3A%2F%2Fk2-prod-grupo-vierci.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fa5%2F2f%2F8f681d1548599af5da9b0e945914%2F01-lion-populations-nationalgeographic-1777804.png",
+    "description": "Un león africano."
+  },
+  {
+    "id": 3,
+    "url": "https://img.freepik.com/fotos-premium/antigua-litografia-cebra-o-cebra-llanuras-concepto-litografia-blanco-negro-arte-vintage-vida-silvestre-ilustraciones-animales-impresion-cebra-antigua_864588-106835.jpg",
+    "description": "Ilustración histórica de una cebra."
+  },
+  {
+    "id": 4,
+    "url": "https://images.unsplash.com/photo-1513541533201-28f15023b0fe?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGZsb3JlcyUyMHklMjBwJUMzJUExamFyb3N8ZW58MHx8MHx8fDA%3D",
+    "description": "Ave rodeada de flores rosadas."
+  },
+  {
+    "id": 5,
+    "url": "https://d1mnxluw9mpf9w.cloudfront.net/media/321/forest-portugal.jpg",
+    "description": "Un bosque densamente poblado."
+  }
+]

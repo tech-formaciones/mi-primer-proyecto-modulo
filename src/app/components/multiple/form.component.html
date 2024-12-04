@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-1"> </div>
+    <div class="col-md-11">
+        <h3>Editar Datos del Cliente</h3>
+        <hr />
+        <form name="form">
+            <div class="form-group">
+                <label for="firstName">Nombre</label>
+                <input type="text" class="form-control" name="firstname" [(ngModel)]="usuario.firstname" required />
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="lastName">Apellidos</label>
+                <input type="text" class="form-control" name="lastname" [(ngModel)]="usuario.lastname" required />
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="username">Usuario</label>
+                <input type="text" class="form-control" name="username" [(ngModel)]="usuario.username" required />
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" class="form-control" name="password" [(ngModel)]="usuario.password" required />
+            </div>
+        </form>
+    </div>
+</div>

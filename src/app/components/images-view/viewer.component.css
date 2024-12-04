@@ -1,0 +1,10 @@
+.size-image {
+    height: 400px;
+    width: auto; 
+    object-fit: cover;         
+    border: 5px solid red;    
+  }
+
+.equal-height {
+    min-height: 400px;    
+}

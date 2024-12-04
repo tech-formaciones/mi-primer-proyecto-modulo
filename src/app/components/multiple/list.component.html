@@ -1,0 +1,26 @@
+<h3>Listado de Clientes</h3>
+<hr />
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td style="width: 10%;">ID</td>
+                <td style="width: 20%;">Nombre</td>
+                <td style="width: 30%;">Apellidos</td>
+                <td style="width: 25%;">Ciudad</td>
+                <td style="width: 15%;"></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of usuarios">
+                <td><b>{{usuario.id}}</b></td>
+                <td><b>{{usuario.firstname}}</b></td>
+                <td><b>{{usuario.lastname}}</b></td>
+                <td><b>{{usuario.office}}</b></td>
+                <td>
+                    <button class="btn btn-success btn-sm" (click)="editUser(usuario)">editar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
