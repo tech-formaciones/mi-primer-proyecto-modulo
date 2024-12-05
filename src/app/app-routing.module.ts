@@ -4,12 +4,14 @@ import { MasterComponent } from './components/master-detail/master.component';
 import { HomeComponent } from './components/home/home.component';
 import { MultipleComponent } from './components/multiple/multiple.component';
 import { ImagesComponent } from './components/images-view/images.component';
+import { DemoDirectivesComponent } from './components/demo-directives/demo-directives.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'masterdetail', component: MasterComponent },
   { path: 'multiple', component: MultipleComponent },
   { path: 'visor', component: ImagesComponent },
+  { path: 'directives', component: DemoDirectivesComponent },
   { path: '**', redirectTo: '' }
 ];
 

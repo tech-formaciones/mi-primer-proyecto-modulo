@@ -40,6 +40,7 @@ import { ViewerComponent } from './components/images-view/viewer.component';
 import { ImagesinfoComponent } from './components/images-view/imagesinfo.component';
 import { SortPipe } from './pipes/sort.pipe';
 import { SionoPipe } from './pipes/siono.pipe';
+import { DemoDirectivesComponent } from './components/demo-directives/demo-directives.component';
 
 
 @NgModule({
@@ -48,7 +49,7 @@ import { SionoPipe } from './pipes/siono.pipe';
     HomeComponent,
     MasterComponent, DetailComponent, 
     MultipleComponent, ListComponent, FormComponent, SignatureComponent, ColorpickerComponent,
-    ImagesComponent, ViewerComponent, ImagesinfoComponent, SortPipe, SionoPipe
+    ImagesComponent, ViewerComponent, ImagesinfoComponent, SortPipe, SionoPipe, DemoDirectivesComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule, ColorPickerModule],
   providers: [{ provide: LOCALE_ID, useValue: 'es' }, SionoPipe],
