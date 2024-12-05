@@ -10,6 +10,7 @@ export class DemoDirectivesComponent {
   colors: Array<string>;
   color: string;
   color2: string;
+  isShow: boolean;
 
   @ViewChild(TransformcolorDirective) directiva!: TransformcolorDirective;
 
@@ -17,6 +18,7 @@ export class DemoDirectivesComponent {
     this.colors = ['Azul', 'Negro', 'Rojo', 'Verde'];
     this.color = 'Negro';
     this.color2 = 'Negro';
+    this.isShow = true;
   }
 
   onClick() {

@@ -39,15 +39,17 @@
             </tbody>
         </table>
         <br />
-        <p><b>Seleccionado:</b> {{userSelect.firstname | uppercase}} {{userSelect.lastname | lowercase}}</p>
-        <p><b>Fecha: </b> {{currentDate | date : 'short'}}</p>
-        <p><b>Fecha: </b> {{currentDate | date : 'medium'}}</p>
-        <p><b>Fecha: </b> {{currentDate | date : 'long'}}</p>
-        <p><b>Fecha: </b> {{currentDate | date : 'full'}}</p>
-        <p><b>Fecha: </b> {{currentDate | date : 'fullDate'}}</p>
-        <p><b>Fecha: </b> {{currentDate | date : 'dd/MM/yyyy'}}</p>
-        <p><b>Observable: </b> {{time | async | date : 'medium'}}</p>
-        <p><b>Pipe Code: </b> {{demo}} vs {{demoText}}</p>
+        <div *ngIf="demo">
+            <p><b>Seleccionado:</b> {{userSelect.firstname | uppercase}} {{userSelect.lastname | lowercase}}</p>
+            <p><b>Fecha: </b> {{currentDate | date : 'short'}}</p>
+            <p><b>Fecha: </b> {{currentDate | date : 'medium'}}</p>
+            <p><b>Fecha: </b> {{currentDate | date : 'long'}}</p>
+            <p><b>Fecha: </b> {{currentDate | date : 'full'}}</p>
+            <p><b>Fecha: </b> {{currentDate | date : 'fullDate'}}</p>
+            <p><b>Fecha: </b> {{currentDate | date : 'dd/MM/yyyy'}}</p>
+            <p><b>Observable: </b> {{time | async | date : 'medium'}}</p>
+            <p><b>Pipe Code: </b> {{demo}} vs {{demoText}}</p>
+        </div>
     </div>
     <div class="col-5"> 
         <!-- Incorporamos el HTML del detalle dentro del HTML del maestro -->

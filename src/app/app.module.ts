@@ -43,6 +43,7 @@ import { SortPipe } from './pipes/sort.pipe';
 import { SionoPipe } from './pipes/siono.pipe';
 import { DemoDirectivesComponent } from './components/demo-directives/demo-directives.component';
 import { TransformcolorDirective } from './directives/transformcolor.directive';
+import { ShowIfDirective } from './directives/show-if.directive';
 
 
 @NgModule({
@@ -51,7 +52,7 @@ import { TransformcolorDirective } from './directives/transformcolor.directive';
     HomeComponent,
     MasterComponent, DetailComponent, 
     MultipleComponent, ListComponent, FormComponent, SignatureComponent, ColorpickerComponent,
-    ImagesComponent, ViewerComponent, ImagesinfoComponent, SortPipe, SionoPipe, DemoDirectivesComponent, TransformcolorDirective
+    ImagesComponent, ViewerComponent, ImagesinfoComponent, SortPipe, SionoPipe, DemoDirectivesComponent, TransformcolorDirective, ShowIfDirective
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule, ColorPickerModule],
   providers: [{ provide: LOCALE_ID, useValue: 'es' }, SionoPipe],
