@@ -17,19 +17,21 @@
         <table class="table table-responsive table-striped">
             <thead>
                 <tr>
-                    <td style="width: 10%;"><b>ID</b></td>
-                    <td style="width: 20%;"><b>Nombre</b></td>
-                    <td style="width: 30%;"><b>Apellidos</b></td>
-                    <td style="width: 25%;"><b>Ciudad</b></td>
+                    <td (click)="onSort('id')" class="clickable" style="width: 10%;"><b>ID</b></td>
+                    <td (click)="onSort('firstname')" class="clickable" style="width: 20%;"><b>Nombre</b></td>
+                    <td (click)="onSort('lastname')" class="clickable" style="width: 25%;"><b>Apellidos</b></td>
+                    <td (click)="onSort('office')" class="clickable" style="width: 15%;"><b>Ciudad</b></td>
+                    <td (click)="onSort('online')" class="clickable" style="width: 15%;"><b>Conectado</b></td>
                     <td style="width: 15%;"> </td>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let userItem of usersList">
+                <tr *ngFor="let userItem of usersList | sort : field : order">
                     <td>{{userItem.id}}</td>
                     <td>{{userItem.firstname}}</td>
                     <td>{{userItem.lastname}}</td>
                     <td>{{userItem.office}}</td>
+                    <td>{{userItem.online | siono }}</td>
                     <td>
                         <button class="btn btn-success btn-sm" (click)="onClickFicha(userItem)">ficha</button>
                     </td>
@@ -45,6 +47,7 @@
         <p><b>Fecha: </b> {{currentDate | date : 'fullDate'}}</p>
         <p><b>Fecha: </b> {{currentDate | date : 'dd/MM/yyyy'}}</p>
         <p><b>Observable: </b> {{time | async | date : 'medium'}}</p>
+        <p><b>Pipe Code: </b> {{demo}} vs {{demoText}}</p>
     </div>
     <div class="col-5"> 
         <!-- Incorporamos el HTML del detalle dentro del HTML del maestro -->

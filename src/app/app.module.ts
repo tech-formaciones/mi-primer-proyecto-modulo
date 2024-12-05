@@ -38,6 +38,8 @@ import { ColorpickerComponent } from './components/multiple/colorpicker.componen
 import { ImagesComponent } from './components/images-view/images.component';
 import { ViewerComponent } from './components/images-view/viewer.component';
 import { ImagesinfoComponent } from './components/images-view/imagesinfo.component';
+import { SortPipe } from './pipes/sort.pipe';
+import { SionoPipe } from './pipes/siono.pipe';
 
 
 @NgModule({
@@ -46,10 +48,10 @@ import { ImagesinfoComponent } from './components/images-view/imagesinfo.compone
     HomeComponent,
     MasterComponent, DetailComponent, 
     MultipleComponent, ListComponent, FormComponent, SignatureComponent, ColorpickerComponent,
-    ImagesComponent, ViewerComponent, ImagesinfoComponent
+    ImagesComponent, ViewerComponent, ImagesinfoComponent, SortPipe, SionoPipe
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule, ColorPickerModule],
-  providers: [{ provide: LOCALE_ID, useValue: 'es' }],
+  providers: [{ provide: LOCALE_ID, useValue: 'es' }, SionoPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

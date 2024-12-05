@@ -4,6 +4,7 @@ import { User } from '../../models/user.model';
 import { Observable } from 'rxjs';
 
 import data from './../../data/dataUser.json';
+import { SionoPipe } from '../../pipes/siono.pipe';
 
 @Component({
   selector: 'app-master',
@@ -14,6 +15,11 @@ import data from './../../data/dataUser.json';
 export class MasterComponent implements OnInit {
   usersList: Array<User> | undefined;
   userSelect: User;
+  field: string;
+  order: 'asc' | 'des';
+
+  demo: boolean;
+  demoText: string;
 
   currentDate: Date;
 
@@ -36,10 +42,16 @@ export class MasterComponent implements OnInit {
   // el template del componente padre.
   @ViewChild('detail1') detalleB!: DetailComponent;
 
-  constructor() {
+  constructor(private demosiono: SionoPipe) {
     this.usersList = data as Array<User>;
     this.userSelect = new User();
     this.currentDate = new Date();
+
+    this.field = 'lastname';
+    this.order = 'asc';
+
+    this.demo = true;
+    this.demoText = this.demosiono.transform(this.demo);
 
     console.log('Componente Maestro, (constructor).');
   }
@@ -60,5 +72,15 @@ export class MasterComponent implements OnInit {
   onSaveUser(item: User) {
     alert('Registrado ' + item.username + '.');
     console.log('Datos grabados. Username: ' + item.username + '.');
+  }
+
+  onSort(colum: string) {
+    if(this.field == colum ) {
+      if(this.order == 'asc') this.order = 'des';
+      else this.order = 'asc';
+    } else {
+      this.order = 'asc';
+      this.field = colum;
+    }
   }
 }
