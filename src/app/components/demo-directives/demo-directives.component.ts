@@ -12,7 +12,7 @@ export class DemoDirectivesComponent {
   colors: Array<string>;
   color: string;
   color2: string;
-  isShow: string;
+  isShow: boolean;
   texto: string;
 
   demoNumber: number;
@@ -23,7 +23,7 @@ export class DemoDirectivesComponent {
     this.colors = ['Azul', 'Negro', 'Rojo', 'Verde'];
     this.color = 'Negro';
     this.color2 = 'Negro';
-    this.isShow = 'true';
+    this.isShow = true;
     this.texto = 'Trabajando con Directivas';
 
     this.demoNumber = this.core.testNumber;

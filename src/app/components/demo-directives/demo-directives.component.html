@@ -12,9 +12,12 @@
 <div class="row">
     <div class="col-1"> </div>
     <div class="col-10 text-center"> 
-        <ng-template ShowIf="isShow">
+        <!--
+        <ng-template [ShowIf]="isShow">
             <h1 (click)="onClick()" transformcolor [colorName]="color" [colorName2]="color2">{{texto}}</h1>
         </ng-template>
+        -->        
+        <h1 *ShowIf="isShow" (click)="onClick()" transformcolor [colorName]="color" [colorName2]="color2">{{texto}}</h1>
         <br />
         <br />
         <input type="text" class="form-control" value="demo directivas" />
@@ -46,8 +49,8 @@
         <div class="form-group">
             <label><b>Mostrar</b></label>
             <select class="form-select" name="isShow" [(ngModel)]="isShow">
-                <option value="true">Sí</option>
-                <option value="false">No</option>
+                <option [ngValue]="true">Sí</option>
+                <option [ngValue]="false">No</option>
             </select>
         </div>
     </div>     
