@@ -12,10 +12,14 @@
 <div class="row">
     <div class="col-1"> </div>
     <div class="col-10 text-center"> 
-        <h1 (click)="onClick()" transformcolor [colorName]="color" [colorName2]="color2">Trabajando con Directivas</h1>
+        <ng-template ShowIf="isShow">
+            <h1 (click)="onClick()" transformcolor [colorName]="color" [colorName2]="color2">{{texto}}</h1>
+        </ng-template>
         <br />
         <br />
         <input type="text" class="form-control" value="demo directivas" />
+        <br />
+        <p><b>Number in Service: </b> {{demoNumber}}</p>
     </div>
     <div class="col-1"> </div>
 </div>

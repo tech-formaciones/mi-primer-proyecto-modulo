@@ -44,6 +44,7 @@ import { SionoPipe } from './pipes/siono.pipe';
 import { DemoDirectivesComponent } from './components/demo-directives/demo-directives.component';
 import { TransformcolorDirective } from './directives/transformcolor.directive';
 import { ShowIfDirective } from './directives/show-if.directive';
+import { CoreService } from './services/core.service';
 
 
 @NgModule({
@@ -55,7 +56,7 @@ import { ShowIfDirective } from './directives/show-if.directive';
     ImagesComponent, ViewerComponent, ImagesinfoComponent, SortPipe, SionoPipe, DemoDirectivesComponent, TransformcolorDirective, ShowIfDirective
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule, ColorPickerModule],
-  providers: [{ provide: LOCALE_ID, useValue: 'es' }, SionoPipe],
+  providers: [{ provide: LOCALE_ID, useValue: 'es' }, SionoPipe, CoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

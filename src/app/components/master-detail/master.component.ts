@@ -5,12 +5,14 @@ import { Observable } from 'rxjs';
 
 import data from './../../data/dataUser.json';
 import { SionoPipe } from '../../pipes/siono.pipe';
+import { CoreService } from '../../services/core.service';
 
 @Component({
   selector: 'app-master',
   standalone: false,
   templateUrl: './master.component.html',
-  styleUrl: './master.component.css'
+  styleUrl: './master.component.css',
+  providers: []
 })
 export class MasterComponent implements OnInit {
   usersList: Array<User> | undefined;
@@ -20,6 +22,7 @@ export class MasterComponent implements OnInit {
 
   demo: boolean;
   demoText: string;
+  demoNumber: number;
 
   currentDate: Date;
 
@@ -42,7 +45,7 @@ export class MasterComponent implements OnInit {
   // el template del componente padre.
   @ViewChild('detail1') detalleB!: DetailComponent;
 
-  constructor(private demosiono: SionoPipe) {
+  constructor(private demosiono: SionoPipe, private core: CoreService) {
     this.usersList = data as Array<User>;
     this.userSelect = new User();
     this.currentDate = new Date();
@@ -52,6 +55,9 @@ export class MasterComponent implements OnInit {
 
     this.demo = true;
     this.demoText = this.demosiono.transform(this.demo);
+
+    this.core.testNumber = 1000;
+    this.demoNumber = this.core.testNumber;
 
     console.log('Componente Maestro, (constructor).');
   }
