@@ -1,0 +1,68 @@
+<br />
+<div class="row">
+    <div class="col-1"> </div>
+    <div class="col-10"> 
+        <h1>Ejercicio: Formulario basado en Plantilla</h1>
+        <hr />
+        <br />
+    </div>
+    <div class="col-1"> </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-1"> </div>
+    <div class="col-10"> 
+        <form #f="ngForm" (ngSubmit)="onSumit(f)">
+            <div class="form-group" [ngClass]="{'was-validated': id.invalid && f.submitted}">
+                <label><b>Identificador</b></label>
+                <input type="text" class="form-control" name="id" [(ngModel)]="user.id" #id="ngModel" required />                
+                <div *ngIf="id.invalid && f.submitted && id.touched" class="text-danger">El identificador es obligatorio.</div>
+            </div>
+            <br />
+            <div class="form-group" [ngClass]="{'was-validated': firstname.invalid && f.submitted}">
+                <label><b>Nombre</b></label>
+                <input type="text" class="form-control" name="firstname" [(ngModel)]="user.firstname" #firstname="ngModel" required />                
+                <div *ngIf="firstname.invalid && f.submitted" class="text-danger">El nombre es obligatorio.</div>
+            </div>
+            <br />
+            <div class="form-group" [ngClass]="{'was-validated': lastname.invalid && f.submitted}">
+                <label><b>Apellidos</b></label>
+                <input type="text" class="form-control" name="lastname" [(ngModel)]="user.lastname" #lastname="ngModel" />                
+                <div *ngIf="lastname.invalid && f.submitted" class="text-danger"></div>
+            </div>  
+            <br />          
+            <div class="form-group" [ngClass]="{'was-validated': username.invalid && f.submitted}">
+                <label><b>Nombre de Usuario</b></label>
+                <input type="text" class="form-control" name="username" [(ngModel)]="user.username" #username="ngModel" required />                
+                <div *ngIf="username.invalid && f.submitted" class="text-danger">El nombre del usuario es obligatorio.</div>
+            </div>
+            <br />
+            <div class="form-group" [ngClass]="{'was-validated': password.invalid && f.submitted}">
+                <label><b>Contraseña</b></label>
+                <input type="text" class="form-control" name="password" [(ngModel)]="user.password" #password="ngModel" 
+                    required minlength="6" />                
+                <div *ngIf="password.invalid && f.submitted" class="text-danger">
+                    <div *ngIf="password.errors?.['required']">La contraseña es obligatoria.</div>
+                    <div *ngIf="password.errors?.['minlength']">La contraseña debe tener al menos 5 caracteres.</div>
+                </div>
+            </div>     
+            <br />       
+            <div class="form-group" [ngClass]="{'was-validated': password2.invalid && f.submitted}">
+                <label><b>Confirmar Contraseña</b></label>
+                <input type="text" class="form-control" name="password2" ngModel #password2="ngModel" 
+                    required minlength="6" />
+                <div *ngIf="password2.invalid && f.submitted" class="text-danger">
+                    <div *ngIf="password2.errors?.['required']">La contraseña es obligatoria.</div>
+                    <div *ngIf="password2.errors?.['minlength']">La contraseña debe tener al menos 5 caracteres.</div>
+                    <div *ngIf="f.controls['password2']?.errors?.['passwordMismatch']">La contraseñas no coinciden.</div>
+                </div>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-success" [disabled]="f.invalid">Procesar</button>
+            <br />
+            <br />
+        </form>
+    </div>
+    <div class="col-1"> </div>
+</div>
+<br />

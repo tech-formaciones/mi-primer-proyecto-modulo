@@ -1,7 +1,7 @@
 // Modulos generales [imports]
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ColorPickerModule } from 'ngx-color-picker';
 
@@ -45,6 +45,7 @@ import { DemoDirectivesComponent } from './components/demo-directives/demo-direc
 import { TransformcolorDirective } from './directives/transformcolor.directive';
 import { ShowIfDirective } from './directives/show-if.directive';
 import { CoreService } from './services/core.service';
+import { FormTemplateComponent } from './components/form-template/form-template.component';
 
 
 @NgModule({
@@ -53,9 +54,11 @@ import { CoreService } from './services/core.service';
     HomeComponent,
     MasterComponent, DetailComponent, 
     MultipleComponent, ListComponent, FormComponent, SignatureComponent, ColorpickerComponent,
-    ImagesComponent, ViewerComponent, ImagesinfoComponent, SortPipe, SionoPipe, DemoDirectivesComponent, TransformcolorDirective, ShowIfDirective
+    ImagesComponent, ViewerComponent, ImagesinfoComponent, 
+    SortPipe, SionoPipe, DemoDirectivesComponent, 
+    TransformcolorDirective, ShowIfDirective, FormTemplateComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule, ColorPickerModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, ColorPickerModule],
   providers: [{ provide: LOCALE_ID, useValue: 'es' }, SionoPipe, CoreService],
   bootstrap: [AppComponent]
 })

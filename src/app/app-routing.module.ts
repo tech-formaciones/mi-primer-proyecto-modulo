@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MultipleComponent } from './components/multiple/multiple.component';
 import { ImagesComponent } from './components/images-view/images.component';
 import { DemoDirectivesComponent } from './components/demo-directives/demo-directives.component';
+import { FormTemplateComponent } from './components/form-template/form-template.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'multiple', component: MultipleComponent },
   { path: 'visor', component: ImagesComponent },
   { path: 'directives', component: DemoDirectivesComponent },
+  { path: 'formtemplate', component: FormTemplateComponent },
   { path: '**', redirectTo: '' }
 ];
 
