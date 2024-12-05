@@ -1,1 +1,43 @@
-<p>demo-directives works!</p>
+<br />
+<div class="row">
+    <div class="col-1"> </div>
+    <div class="col-10"> 
+        <h1>Ejercicio: Directivas</h1>
+        <hr />
+        <br />
+    </div>
+    <div class="col-1"> </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-1"> </div>
+    <div class="col-10 text-center"> 
+        <h1 (click)="onClick()" transformcolor [colorName]="color" [colorName2]="color2">Trabajando con Directivas</h1>
+        <br />
+        <br />
+        <input type="text" class="form-control" value="demo directivas" />
+    </div>
+    <div class="col-1"> </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-1"> </div>
+    <div class="col-5"> 
+        <div class="form-group">
+            <label><b>Color</b></label>
+            <select class="form-select" name="color" [(ngModel)]="color" (change)="onChangeSelect()" >
+                <option *ngFor="let item of colors" [value]="item">{{item}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-5"> 
+        <div class="form-group">
+            <label><b>Color Mouse</b></label>
+            <select class="form-select" name="color2" [(ngModel)]="color2">
+                <option *ngFor="let item of colors" [value]="item">{{item}}</option>
+            </select>
+        </div>
+    </div>    
+    <div class="col-1"> </div>
+</div>
+<br />

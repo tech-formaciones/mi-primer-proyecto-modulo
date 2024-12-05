@@ -38,9 +38,11 @@ import { ColorpickerComponent } from './components/multiple/colorpicker.componen
 import { ImagesComponent } from './components/images-view/images.component';
 import { ViewerComponent } from './components/images-view/viewer.component';
 import { ImagesinfoComponent } from './components/images-view/imagesinfo.component';
+
 import { SortPipe } from './pipes/sort.pipe';
 import { SionoPipe } from './pipes/siono.pipe';
 import { DemoDirectivesComponent } from './components/demo-directives/demo-directives.component';
+import { TransformcolorDirective } from './directives/transformcolor.directive';
 
 
 @NgModule({
@@ -49,7 +51,7 @@ import { DemoDirectivesComponent } from './components/demo-directives/demo-direc
     HomeComponent,
     MasterComponent, DetailComponent, 
     MultipleComponent, ListComponent, FormComponent, SignatureComponent, ColorpickerComponent,
-    ImagesComponent, ViewerComponent, ImagesinfoComponent, SortPipe, SionoPipe, DemoDirectivesComponent
+    ImagesComponent, ViewerComponent, ImagesinfoComponent, SortPipe, SionoPipe, DemoDirectivesComponent, TransformcolorDirective
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule, ColorPickerModule],
   providers: [{ provide: LOCALE_ID, useValue: 'es' }, SionoPipe],
