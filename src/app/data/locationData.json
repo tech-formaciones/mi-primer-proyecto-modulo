@@ -1,0 +1,278 @@
+[
+  {
+    "city": "Buenos Aires",
+    "country": "Argentina"
+  },
+  {
+    "city": "Graz",
+    "country": "Austria"
+  },
+  {
+    "city": "Salzburg",
+    "country": "Austria"
+  },
+  {
+    "city": "Bruxelles",
+    "country": "Belgium"
+  },
+  {
+    "city": "Charleroi",
+    "country": "Belgium"
+  },
+  {
+    "city": "Campinas",
+    "country": "Brazil"
+  },
+  {
+    "city": "Resende",
+    "country": "Brazil"
+  },
+  {
+    "city": "Rio de Janeiro",
+    "country": "Brazil"
+  },
+  {
+    "city": "Sao Paulo",
+    "country": "Brazil"
+  },
+  {
+    "city": "Montréal",
+    "country": "Canada"
+  },
+  {
+    "city": "Tsawassen",
+    "country": "Canada"
+  },
+  {
+    "city": "Vancouver",
+    "country": "Canada"
+  },
+  {
+    "city": "Århus",
+    "country": "Denmark"
+  },
+  {
+    "city": "Kobenhavn",
+    "country": "Denmark"
+  },
+  {
+    "city": "Helsinki",
+    "country": "Finland"
+  },
+  {
+    "city": "Oulu",
+    "country": "Finland"
+  },
+  {
+    "city": "Lille",
+    "country": "France"
+  },
+  {
+    "city": "Lyon",
+    "country": "France"
+  },
+  {
+    "city": "Marseille",
+    "country": "France"
+  },
+  {
+    "city": "Nantes",
+    "country": "France"
+  },
+  {
+    "city": "Paris",
+    "country": "France"
+  },
+  {
+    "city": "Reims",
+    "country": "France"
+  },
+  {
+    "city": "Strasbourg",
+    "country": "France"
+  },
+  {
+    "city": "Toulouse",
+    "country": "France"
+  },
+  {
+    "city": "Versailles",
+    "country": "France"
+  },
+  {
+    "city": "Aachen",
+    "country": "Germany"
+  },
+  {
+    "city": "Berlin",
+    "country": "Germany"
+  },
+  {
+    "city": "Brandenburg",
+    "country": "Germany"
+  },
+  {
+    "city": "Cunewalde",
+    "country": "Germany"
+  },
+  {
+    "city": "Frankfurt a.M.",
+    "country": "Germany"
+  },
+  {
+    "city": "Köln",
+    "country": "Germany"
+  },
+  {
+    "city": "Leipzig",
+    "country": "Germany"
+  },
+  {
+    "city": "Mannheim",
+    "country": "Germany"
+  },
+  {
+    "city": "München",
+    "country": "Germany"
+  },
+  {
+    "city": "Münster",
+    "country": "Germany"
+  },
+  {
+    "city": "Stuttgart",
+    "country": "Germany"
+  },
+  {
+    "city": "Cork",
+    "country": "Ireland"
+  },
+  {
+    "city": "Bergamo",
+    "country": "Italy"
+  },
+  {
+    "city": "Reggio Emilia",
+    "country": "Italy"
+  },
+  {
+    "city": "Torino",
+    "country": "Italy"
+  },
+  {
+    "city": "México D.F.",
+    "country": "Mexico"
+  },
+  {
+    "city": "Stavern",
+    "country": "Norway"
+  },
+  {
+    "city": "Warszawa",
+    "country": "Poland"
+  },
+  {
+    "city": "Lisboa",
+    "country": "Portugal"
+  },
+  {
+    "city": "Barcelona",
+    "country": "Spain"
+  },
+  {
+    "city": "Madrid",
+    "country": "Spain"
+  },
+  {
+    "city": "Sevilla",
+    "country": "Spain"
+  },
+  {
+    "city": "Bräcke",
+    "country": "Sweden"
+  },
+  {
+    "city": "Luleå",
+    "country": "Sweden"
+  },
+  {
+    "city": "Bern",
+    "country": "Switzerland"
+  },
+  {
+    "city": "Genève",
+    "country": "Switzerland"
+  },
+  {
+    "city": "Cowes",
+    "country": "UK"
+  },
+  {
+    "city": "London",
+    "country": "UK"
+  },
+  {
+    "city": "Albuquerque",
+    "country": "USA"
+  },
+  {
+    "city": "Anchorage",
+    "country": "USA"
+  },
+  {
+    "city": "Boise",
+    "country": "USA"
+  },
+  {
+    "city": "Butte",
+    "country": "USA"
+  },
+  {
+    "city": "Elgin",
+    "country": "USA"
+  },
+  {
+    "city": "Eugene",
+    "country": "USA"
+  },
+  {
+    "city": "Kirkland",
+    "country": "USA"
+  },
+  {
+    "city": "Lander",
+    "country": "USA"
+  },
+  {
+    "city": "Portland",
+    "country": "USA"
+  },
+  {
+    "city": "San Francisco",
+    "country": "USA"
+  },
+  {
+    "city": "Seattle",
+    "country": "USA"
+  },
+  {
+    "city": "Walla Walla",
+    "country": "USA"
+  },
+  {
+    "city": "Barquisimeto",
+    "country": "Venezuela"
+  },
+  {
+    "city": "Caracas",
+    "country": "Venezuela"
+  },
+  {
+    "city": "I. de Margarita",
+    "country": "Venezuela"
+  },
+  {
+    "city": "San Cristóbal",
+    "country": "Venezuela"
+  }
+]

@@ -19,4 +19,8 @@ export class CoreService {
     if (username == 'borja') return true;
     else return false;
   }
+
+  isNullOrEmpty(str: string | null | undefined): boolean {
+    return str === '' || str === null || str === undefined;
+  }
 }

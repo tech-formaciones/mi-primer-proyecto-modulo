@@ -48,6 +48,7 @@ import { CoreService } from './services/core.service';
 import { FormTemplateComponent } from './components/form-template/form-template.component';
 import { FormReactiveComponent } from './components/form-reactive/form-reactive.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CustomerListComponent } from './components/customer/customer-list.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { HttpClientModule } from '@angular/common/http';
     MultipleComponent, ListComponent, FormComponent, SignatureComponent, ColorpickerComponent,
     ImagesComponent, ViewerComponent, ImagesinfoComponent, 
     SortPipe, SionoPipe, DemoDirectivesComponent, 
-    TransformcolorDirective, ShowIfDirective, FormTemplateComponent, FormReactiveComponent
+    TransformcolorDirective, ShowIfDirective, FormTemplateComponent, FormReactiveComponent, 
+    CustomerListComponent
   ],
   imports: [BrowserModule, AppRoutingModule, 
     HttpClientModule,

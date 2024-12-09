@@ -7,6 +7,7 @@ import { ImagesComponent } from './components/images-view/images.component';
 import { DemoDirectivesComponent } from './components/demo-directives/demo-directives.component';
 import { FormTemplateComponent } from './components/form-template/form-template.component';
 import { FormReactiveComponent } from './components/form-reactive/form-reactive.component';
+import { CustomerListComponent } from './components/customer/customer-list.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'directives', component: DemoDirectivesComponent },
   { path: 'formtemplate', component: FormTemplateComponent },
   { path: 'formreactive', component: FormReactiveComponent },
+  { path: 'customers', component: CustomerListComponent },
   { path: '**', redirectTo: '' }
 ];
 
