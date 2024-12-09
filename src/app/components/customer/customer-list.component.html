@@ -20,24 +20,24 @@
                     <div class="col-4">
                         <div class="form-group">
                             <label><b>Empresa</b></label>
-                            <input type="text" class="form-control" />
+                            <input type="text" class="form-control" [(ngModel)]="companySearch" />
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="form-group">
                             <label><b>Ciudad</b></label>
-                            <select class="form-select">
+                            <select class="form-select" [(ngModel)]="citySearch">
                                 <option value="" selected>Seleccionar una ciudad</option>
-                                <option value=""></option>
+                                <option *ngFor="let city of cities" value="{{city}}">{{city}}</option>
                             </select>
                         </div>                        
                     </div>
                     <div class="col-4">
                         <div class="form-group">
                             <label><b>País</b></label>
-                            <select class="form-select">
+                            <select class="form-select" [(ngModel)]="countrySearch" (change)="onChangeCountry()">
                                 <option value="" selected>Seleccionar un país</option>
-                                <option value=""></option>
+                                <option *ngFor="let country of countries" [value]="country">{{country}}</option>
                             </select>
                         </div>                         
                     </div>
@@ -45,7 +45,7 @@
                 <br />
                 <div class="row">
                     <div class="col text-end">
-                        <button type="button" class="btn btn-danger">Volver</button> &nbsp;
+                        <button type="button" class="btn btn-danger">Limpiar</button> &nbsp;
                         <button type="button" class="btn btn-success">Buscar</button> 
                     </div>
                 </div>
@@ -74,13 +74,23 @@
                         </tr>
                     </thead>
                     <body>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr *ngFor="let item of customers">
+                            <td>{{item.customerID}}</td>
+                            <td>{{item.companyName}}</td>
+                            <td>
+                                {{item.contactName}}
+                                <br />
+                                <small>({{item.contactTitle}})</small>
+                            </td>
+                            <td>
+                                {{item.address}}
+                                <br />
+                                <small>{{item.postalCode}} {{item.city}} ({{item.country}})</small>
+                            </td>
+                            <td>{{item.phone}}</td>
+                            <td>
+                                <a href="/" class="btn btn-success btn-sm">ficha</a>
+                            </td>
                         </tr>
                     </body>
                 </table>
