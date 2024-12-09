@@ -39,7 +39,7 @@
             <br />
             <div class="form-group" [ngClass]="{'was-validated': password.invalid && f.submitted}">
                 <label><b>Contraseña</b></label>
-                <input type="text" class="form-control" name="password" [(ngModel)]="user.password" #password="ngModel" 
+                <input type="password" class="form-control" name="password" [(ngModel)]="user.password" #password="ngModel" 
                     required minlength="6" />                
                 <div *ngIf="password.invalid && f.submitted" class="text-danger">
                     <div *ngIf="password.errors?.['required']">La contraseña es obligatoria.</div>
@@ -49,7 +49,7 @@
             <br />       
             <div class="form-group" [ngClass]="{'was-validated': password2.invalid && f.submitted}">
                 <label><b>Confirmar Contraseña</b></label>
-                <input type="text" class="form-control" name="password2" ngModel #password2="ngModel" 
+                <input type="password" class="form-control" name="password2" ngModel #password2="ngModel" 
                     required minlength="6" />
                 <div *ngIf="password2.invalid && f.submitted" class="text-danger">
                     <div *ngIf="password2.errors?.['required']">La contraseña es obligatoria.</div>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <br />
-            <button type="submit" class="btn btn-success" [disabled]="f.invalid">Procesar</button>
+            <button type="submit" class="btn btn-success" >Procesar</button>
             <br />
             <br />
         </form>

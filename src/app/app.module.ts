@@ -46,6 +46,8 @@ import { TransformcolorDirective } from './directives/transformcolor.directive';
 import { ShowIfDirective } from './directives/show-if.directive';
 import { CoreService } from './services/core.service';
 import { FormTemplateComponent } from './components/form-template/form-template.component';
+import { FormReactiveComponent } from './components/form-reactive/form-reactive.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -56,9 +58,11 @@ import { FormTemplateComponent } from './components/form-template/form-template.
     MultipleComponent, ListComponent, FormComponent, SignatureComponent, ColorpickerComponent,
     ImagesComponent, ViewerComponent, ImagesinfoComponent, 
     SortPipe, SionoPipe, DemoDirectivesComponent, 
-    TransformcolorDirective, ShowIfDirective, FormTemplateComponent
+    TransformcolorDirective, ShowIfDirective, FormTemplateComponent, FormReactiveComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, ColorPickerModule],
+  imports: [BrowserModule, AppRoutingModule, 
+    HttpClientModule,
+    FormsModule, ReactiveFormsModule, NgbModule, ColorPickerModule],
   providers: [{ provide: LOCALE_ID, useValue: 'es' }, SionoPipe, CoreService],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,87 @@
+<br />
+<div class="row">
+    <div class="col-1"> </div>
+    <div class="col-10"> 
+        <h1>Ejercicio: Formulario Reactivo</h1>
+        <hr />
+        <br />
+    </div>
+    <div class="col-1"> </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-1"> </div>
+    <div class="col-10"> 
+        <form [formGroup]="formulario" (ngSubmit)="onSumit()" novalidate>
+            <div class="form-group" [ngClass]="{'was-validated': formulario.get('id')?.invalid && formulario.get('id')?.touched}">
+                <label><b>Identificador</b></label>
+                <input type="text" class="form-control" formControlName="id" />                
+                <div *ngIf="formulario.get('id')?.invalid && formulario.get('id')?.touched" class="text-danger">
+                    El identificador es obligatorio.
+                </div>
+            </div>
+            <br />
+            <div class="form-group" [ngClass]="{'was-validated': formulario.get('firstname')?.invalid && formulario.get('firstname')?.touched}">
+                <label><b>Nombre</b></label>
+                <input type="text" class="form-control" formControlName="firstname" />                
+                <div *ngIf="formulario.get('firstname')?.invalid && formulario.get('firstname')?.touched" class="text-danger">
+                    El nombre es obligatorio.
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                <label><b>Apellidos</b></label>
+                <input type="text" class="form-control" formControlName="lastname" />                                
+            </div>
+            <br />
+            <div class="form-group" [ngClass]="{'was-validated': formulario.get('username')?.invalid && formulario.get('username')?.touched}">
+                <label><b>Identificador</b></label>
+                <input type="text" class="form-control" formControlName="username" />                
+                <div *ngIf="formulario.get('username')?.invalid && formulario.get('username')?.touched" class="text-danger">
+                    El nombre de usuario es obligatorio.
+                </div>
+            </div>
+            <br />
+            <div class="form-group" [ngClass]="{'was-validated': formulario.get('password')?.invalid && formulario.get('password')?.touched}">
+                <label><b>Contaseña</b></label>
+                <input type="password" class="form-control" formControlName="password" />                
+                <div *ngIf="formulario.get('password')?.invalid && formulario.get('password')?.touched" class="text-danger">
+                    <div *ngIf="formulario.get('password')?.errors?.['required']">
+                        La contraseña es obligatoria.
+                    </div>
+                    <div *ngIf="formulario.get('password')?.errors?.['minlength']">
+                        La contraseña debe tener al menos 5 caracteres.
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="form-group" [ngClass]="{'was-validated': formulario.get('password2')?.invalid && formulario.get('password2')?.touched}">
+                <label><b>Repite contraseña</b></label>
+                <input type="password" class="form-control" formControlName="password2" />                
+                <div *ngIf="formulario.hasError('notMatching') && formulario.get('password2')?.touched" class="text-danger">
+                    Las contraseñas no coinciden.
+                </div>
+            </div>  
+            <br />
+            <button type="submit" class="btn btn-success" >Procesar</button>
+            <br />
+            <br />                      
+        </form>
+    </div>
+    <div class="col-1"> </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-1"> </div>
+    <div class="col-10"> 
+        <br />
+        <p><b>Es Valido:</b> {{formulario.valid}}</p>
+        <p><b>Es Inválido:</b> {{formulario.invalid}}</p>
+        <p><b>Pristine:</b> {{formulario.pristine}}</p>
+        <p><b>Dirty:</b> {{formulario.dirty}}</p>
+        <p><b>Touched:</b> {{formulario.touched}}</p>
+        <p><b>Untouched:</b> {{formulario.untouched}}</p>
+    </div>
+    <div class="col-1"> </div>
+</div>
+<br />

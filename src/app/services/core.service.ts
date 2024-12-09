@@ -13,4 +13,10 @@ export class CoreService {
   testService2 () { }
 
   testService3 () { }
+
+  // Simula un método que puede chequear el usuario contra una base de datos o APIRest
+  checkUsernameExists(username: string): boolean {
+    if (username == 'borja') return true;
+    else return false;
+  }
 }
