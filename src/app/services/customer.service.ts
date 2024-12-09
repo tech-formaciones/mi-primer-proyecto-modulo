@@ -14,7 +14,11 @@ export class CustomerService {
     'apikey': '1234567890.'
   });
 
-  constructor(private http: HttpClient, private core: CoreService) { }
+  tempData: Array<Customer> | null;
+
+  constructor(private http: HttpClient, private core: CoreService) { 
+    this.tempData = null;
+  }
 
   getCustomers(company: string = '', city: string = '', country: string = ''): Observable<Array<Customer>> {
     let params: string = '';
@@ -26,7 +30,7 @@ export class CustomerService {
       params += (params === '' ? '?' : '&') + `city=${city}`;
 
     if(!this.core.isNullOrEmpty(country))
-      params += (params === '' ? '?' : '&') + `company=${country}`;
+      params += (params === '' ? '?' : '&') + `country=${country}`;
 
     return this.http.get<Array<Customer>>(this.apiUrl + params, { headers: this.headers });
   }
@@ -35,6 +39,15 @@ export class CustomerService {
     return this.http.get<Customer>(`${this.apiUrl}/${id}`, { headers: this.headers });
   }
 
+  createCustomer(id: string, customer: Customer): Observable<Customer> {
+    return this.http.post<Customer>(`${this.apiUrl}/${id}`, customer, { headers: this.headers });
+  }
 
+  updateCustomer(id: string, customer: Customer): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${id}`, customer, { headers: this.headers });
+  }
 
+  deleteCustomer(id: string): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/${id}`, { headers: this.headers });
+  }
 }

@@ -49,6 +49,8 @@ import { FormTemplateComponent } from './components/form-template/form-template.
 import { FormReactiveComponent } from './components/form-reactive/form-reactive.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CustomerListComponent } from './components/customer/customer-list.component';
+import { CustomerDetailComponent } from './components/customer/customer-detail.component';
+import { CustomerService } from './services/customer.service';
 
 
 @NgModule({
@@ -60,12 +62,12 @@ import { CustomerListComponent } from './components/customer/customer-list.compo
     ImagesComponent, ViewerComponent, ImagesinfoComponent, 
     SortPipe, SionoPipe, DemoDirectivesComponent, 
     TransformcolorDirective, ShowIfDirective, FormTemplateComponent, FormReactiveComponent, 
-    CustomerListComponent
+    CustomerListComponent, CustomerDetailComponent
   ],
   imports: [BrowserModule, AppRoutingModule, 
     HttpClientModule,
     FormsModule, ReactiveFormsModule, NgbModule, ColorPickerModule],
-  providers: [{ provide: LOCALE_ID, useValue: 'es' }, SionoPipe, CoreService],
+  providers: [{ provide: LOCALE_ID, useValue: 'es' }, SionoPipe, CoreService, CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

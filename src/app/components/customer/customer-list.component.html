@@ -45,8 +45,8 @@
                 <br />
                 <div class="row">
                     <div class="col text-end">
-                        <button type="button" class="btn btn-danger">Limpiar</button> &nbsp;
-                        <button type="button" class="btn btn-success">Buscar</button> 
+                        <button type="button" class="btn btn-danger" (click)="clearCustomers()">Limpiar</button> &nbsp;
+                        <button type="button" class="btn btn-success" (click)="searchCustomers()">Buscar</button> 
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                             <td><b>Operativa</b></td>
                         </tr>
                     </thead>
-                    <body>
+                    <tbody>
                         <tr *ngFor="let item of customers">
                             <td>{{item.customerID}}</td>
                             <td>{{item.companyName}}</td>
@@ -89,10 +89,10 @@
                             </td>
                             <td>{{item.phone}}</td>
                             <td>
-                                <a href="/" class="btn btn-success btn-sm">ficha</a>
+                                <a [routerLink]="['/customers', item.customerID]" class="btn btn-success btn-sm">ficha</a>
                             </td>
                         </tr>
-                    </body>
+                    </tbody>
                 </table>
             </div>
         </div>

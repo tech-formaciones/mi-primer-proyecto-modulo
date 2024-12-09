@@ -1,0 +1,106 @@
+<br />
+<div class="row">
+    <div class="col-1"> </div>
+    <div class="col-10"> 
+        <h1>Ejercicio: Clientes</h1>
+        <hr />
+        <br />
+    </div>
+    <div class="col-1"> </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-1"> </div>
+    <div class="col-10"> 
+        <div class="card">
+            <h5 class="card-header"><b>Ficha de {{customer.companyName}}</b></h5>
+            <div class="card-body">
+                <form #f="ngForm" (ngSubmit)="onSumit()">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group" [ngClass]="{'was-validated': customerID.invalid && f.submitted}">
+                                <label><b>Identificador</b></label>
+                                <input type="text" class="form-control" name="customerID" [(ngModel)]="customer.customerID" #customerID="ngModel" required />                
+                                <div *ngIf="customerID.invalid && f.submitted" class="text-danger">El identificador es obligatorio.</div>
+                            </div>
+                            <br />
+                            <div class="form-group" [ngClass]="{'was-validated': companyName.invalid && f.submitted}">
+                                <label><b>Empresa</b></label>
+                                <input type="text" class="form-control" name="companyName" [(ngModel)]="customer.companyName" #companyName="ngModel" required />                
+                                <div *ngIf="companyName.invalid && f.submitted" class="text-danger">El nombre de la empresa es obligatorio.</div>
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <label><b>Contacto</b></label>
+                                <input type="text" class="form-control" name="contactName" [(ngModel)]="customer.contactName" #contactName="ngModel" />                
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <label><b>Cargo</b></label>
+                                <input type="text" class="form-control" name="contactTitle" [(ngModel)]="customer.contactTitle" #contactTitle="ngModel" />                
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <label><b>Dirección</b></label>
+                                <input type="text" class="form-control" name="address" [(ngModel)]="customer.address" #address="ngModel" />                
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <label><b>Región</b></label>
+                                <input type="text" class="form-control" name="region" [(ngModel)]="customer.region" #region="ngModel" />                
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <label><b>Código Postal</b></label>
+                                <input type="text" class="form-control" name="postalCode" [(ngModel)]="customer.postalCode" #postalCode="ngModel" />                
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <label><b>Ciudad</b></label>
+                                <input type="text" class="form-control" name="city" [(ngModel)]="customer.city" #city="ngModel" />                
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <label><b>País</b></label>
+                                <input type="text" class="form-control" name="country" [(ngModel)]="customer.country" #country="ngModel" />                
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <label><b>Teléfono</b></label>
+                                <input type="text" class="form-control" name="phone" [(ngModel)]="customer.phone" #phone="ngModel" />                
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <label><b>Fax</b></label>
+                                <input type="text" class="form-control" name="fax" [(ngModel)]="customer.fax" #fax="ngModel" />                
+                            </div>
+                            <br />
+                        </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                    </div>
+                    <br />                    
+                    <div class="row">
+                        <div class="col text-end">
+                            <a [routerLink]="['/customers']" class="btn btn-danger" >Volver al listado</a> &nbsp;
+                            <button type="submit" class="btn btn-success" >Grabar</button> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-1"> </div>
+</div>
+<br />
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Info</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>        
+    </div>
+    <div class="modal-body">
+        <p>{{message}}</p>
+    </div>
+    <div class="modal-footer">
+        <div class="btn btn-primary" (click)="modal.dismiss('Cross click')">Ok</div>
+    </div>
+</ng-template>
